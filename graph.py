@@ -48,9 +48,9 @@ class Graph:
                 print(f"{root.name} -> ", end='')
                 for symbol in symbols:
                     print(symbol, end=' ')
-                print(f"-> {vertex.name}")
+                print(f"-> {vertex.name} (End: {vertex.end_vertex})")
             else:
-                print(f"{root.name} -> {symbols} -> {vertex.name}")
+                print(f"{root.name} -> {symbols} -> {vertex.name} (End: {vertex.end_vertex})")
         for connected_vertex in root.connected_vertexes:
             vertex = connected_vertex["vertex"]
             self.__output(vertex, traversed_vertexes)
